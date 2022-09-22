@@ -1,0 +1,43 @@
+parameters:
+
+  order:
+
+    orderField: 
+      name: orderField
+      in: query
+      description: Order field from list
+      required: false
+      type: string
+      allowEmptyValue: false
+    order:
+      name: order
+      in: query
+      description: Order by ASC and DESC
+      required: false
+      type: string
+      allowEmptyValue: false
+
+    limit:
+      name: limit
+      in: query
+      description: page limit
+      required: false
+      type: string
+      allowEmptyValue: false
+
+    search:
+      name: search
+      in: query
+      description: Order by search
+      required: false
+      type: string
+      allowEmptyValue: false
+
+    page:
+      name: page
+      in: query
+      description: Order page from list
+      required: false
+      type: string
+      allowEmptyValue: false
+    

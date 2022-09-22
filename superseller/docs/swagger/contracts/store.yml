@@ -1,0 +1,43 @@
+/contracts:
+  post:
+    tags:
+      - Contracts
+    summary: Create contract by sellers and leads
+    security:
+      - BearerAuth: []
+    description: Create contract by sellers and leads
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: number
+                required: true
+
+              name:
+                type: string
+
+              sellers_id:
+                type: number
+
+              leads_id:
+                type: number
+
+
+    produces:
+      - application/json
+    responses:
+      200:
+        description: Success
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  description: Message
+                  type: string
+                  example: 'Contract from user created with success'

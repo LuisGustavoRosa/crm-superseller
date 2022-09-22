@@ -1,0 +1,35 @@
+/addLeadSeller:
+  post:
+    tags:
+      - Leads
+    summary: Add Lead and Seller
+    security:
+      - BearerAuth: []
+    description: Add Lead and Seller
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              sellers_id:
+                type: number
+                required: true
+              leads_id:
+                type: number
+                required: true
+    produces:
+      - application/json
+    responses:
+      200:
+        description: Success
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  description: Message
+                  type: string
+                  example: 'Add Lead and Seller with success'

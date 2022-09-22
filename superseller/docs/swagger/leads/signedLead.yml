@@ -1,0 +1,43 @@
+/signedLead/{id}:
+  post:
+    parameters:
+      - in: path
+        name: id
+        type: number
+    tags:
+      - Leads
+    security:
+      - BearerAuth: []
+    summary: Signed Lead
+    description: Signed Lead
+    produces:
+      - application/json
+    responses:
+      200:
+        description: SignedLead
+        content:
+          application/json:
+            schema:
+              type: 'array'
+              items:
+                properties:
+                  id:
+                    type: integer
+
+                  name:
+                    type: string
+
+                  email:
+                    type: string
+
+                  telefone:
+                    type: string
+
+                  is_signed:
+                    type: string
+
+                  created_at:
+                    type: string
+                    format: Datetime
+
+

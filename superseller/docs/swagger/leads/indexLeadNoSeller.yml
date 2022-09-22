@@ -1,0 +1,40 @@
+/indexLeadNoSeller:
+  get:
+    tags:
+      - Leads
+    security:
+      - BearerAuth: []
+    summary: Index for Leads no sellers
+    description: List Leads no sellers
+    produces:
+      - application/json
+    responses:
+      200:
+        description: List Leads no sellers
+        content:
+          application/json:
+            schema:
+              type: 'array'
+              items:
+                properties:
+                  id:
+                    type: integer
+
+                  name:
+                    type: string
+
+                  email:
+                    type: string
+
+                  telefone:
+                    type: string
+
+                  is_signed:
+                    type: string
+
+                  created_at:
+                    type: string
+                    format: Datetime
+
+
+

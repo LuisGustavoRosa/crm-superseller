@@ -1,0 +1,39 @@
+/clients/{id}:
+  get:
+    parameters:
+      - in: path
+        name: id
+        type: number
+    tags:
+      - Clients
+    security:
+      - BearerAuth: []
+    summary: Index of a clients by sellers
+    description: List of a clients by sellers
+    produces:
+      - application/json
+    responses:
+      200:
+        description: List clients by sellers
+        content:
+          application/json:
+            schema:
+              type: 'array'
+              items:
+                properties:
+                  id:
+                    type: integer
+
+                  name:
+                    type: string
+
+                  email:
+                    type: boolean
+
+                  telefone:
+                    type: string
+                    format: Datetime
+
+                  sellers_id:
+                    type: string
+                    format: Datetime

@@ -1,0 +1,38 @@
+/sellers:
+  post:
+    tags:
+      - Sellers
+    summary: Create Sellers
+    security:
+      - BearerAuth: []
+    description: Create Sellers
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                required: true
+              email:
+                type: string
+                required: true
+              telefone:
+                type: string
+                required: true
+    produces:
+      - application/json
+    responses:
+      200:
+        description: Success
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  description: Message
+                  type: string
+                  example: 'Sellers created with success'

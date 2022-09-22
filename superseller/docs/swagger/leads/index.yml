@@ -1,0 +1,40 @@
+/leads:
+  get:
+    tags:
+      - Leads
+    security:
+      - BearerAuth: []
+    summary: Index for Leads
+    description: List Leads
+    produces:
+      - application/json
+    responses:
+      200:
+        description: List Leads
+        content:
+          application/json:
+            schema:
+              type: 'array'
+              items:
+                properties:
+                  id:
+                    type: integer
+
+                  name:
+                    type: string
+
+                  email:
+                    type: string
+
+                  telefone:
+                    type: string
+
+                  is_signed:
+                    type: string
+
+                  created_at:
+                    type: string
+                    format: Datetime
+
+                  
+

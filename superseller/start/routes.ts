@@ -15,4 +15,4 @@ Route.resource('/clients', 'ClientsController')
 Route.post('/addLeadSeller', 'LeadsController.addLeadSeller')
 
 Route.get('/indexLeadNoSeller','LeadsController.indexLeadNoSeller')
-Route.get('/signedLead/:id','LeadsController.signedLead')
+Route.post('/signedLead/:id','LeadsController.signedLead')
