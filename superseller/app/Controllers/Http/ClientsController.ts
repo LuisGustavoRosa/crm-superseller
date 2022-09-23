@@ -1,11 +1,13 @@
 import ClientsService from "App/Services/ClientsService";
-export default class SellersController {
+import ClientValidator from "App/Validators/Client/ClientValidator";
+export default class ClientsController {
   private clientsservice: ClientsService;
 
   constructor() {
     this.clientsservice = new ClientsService();
   }
   public async store({ request, response }) {
+    await request.validate(ClientValidator)
     const query = request.all();
     try {
       return await this.clientsservice.store(query);

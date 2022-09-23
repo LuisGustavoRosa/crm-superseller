@@ -1,12 +1,13 @@
 import ContractService from "App/Services/ContractsService";
-
-export default class SellersController {
+import ContractValidator from 'App/Validators/Contract/ContractValidator'
+export default class ContractController {
   private contractService: ContractService;
 
   constructor() {
     this.contractService = new ContractService();
   }
   public async store({request, response}) {
+    await request.validate(ContractValidator)
     const query = request.all();
     try {
       return await this.contractService.store(query);

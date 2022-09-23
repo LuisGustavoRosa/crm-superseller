@@ -1,6 +1,6 @@
 import ClientsRepository from "App/Repositories/ClientsRepository";
 
-export default class UsersService {
+export default class ClientsService {
   private clientRepository: ClientsRepository;
 
   constructor() {

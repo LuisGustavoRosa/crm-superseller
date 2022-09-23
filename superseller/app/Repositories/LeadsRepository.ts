@@ -27,7 +27,7 @@ export default class LeadsRepository {
     return await Client.create({
       name: lead.name,
       email: lead.email,
-      telefone: lead.telefone,
+      telephone: lead.telephone,
       sellers_id : lead.sellers_id
     });
   }

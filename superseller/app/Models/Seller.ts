@@ -15,7 +15,7 @@ export default class Seller extends BaseModel {
   public email: boolean
 
   @column()
-  public telefone: boolean
+  public telephone: boolean
 
   @column()
   public leads_id :number

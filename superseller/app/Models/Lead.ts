@@ -14,7 +14,7 @@ export default class Lead extends BaseModel {
   public email: boolean;
 
   @column()
-  public telefone: boolean;
+  public telephone: boolean;
 
   @column()
   public is_signed: boolean;

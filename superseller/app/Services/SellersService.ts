@@ -1,6 +1,6 @@
 import SellersRepository from "App/Repositories/SellersRepository";
 
-export default class UsersService {
+export default class SellersService {
   private sellersRepository: SellersRepository;
 
   constructor() {

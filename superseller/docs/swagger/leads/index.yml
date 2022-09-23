@@ -26,7 +26,7 @@
                   email:
                     type: string
 
-                  telefone:
+                  telephone:
                     type: string
 
                   is_signed:
@@ -36,5 +36,5 @@
                     type: string
                     format: Datetime
 
-                  
+
 

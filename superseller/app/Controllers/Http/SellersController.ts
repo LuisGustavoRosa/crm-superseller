@@ -1,3 +1,4 @@
+import SellerValidator from 'App/Validators/Seller/SellerValidator'
 import SellerService from "App/Services/SellersService";
 
 export default class SellersController {
@@ -8,6 +9,7 @@ export default class SellersController {
   }
 
   public async store({ request, response }) {
+    await request.validate(SellerValidator)
     const query = request.all();
     try {
       return await this.sellerService.store(query);

@@ -13,7 +13,7 @@ export default class Client extends BaseModel {
   public email: boolean
 
   @column()
-  public telefone: boolean
+  public telephone: boolean
 
   @column()
   public sellers_id: boolean

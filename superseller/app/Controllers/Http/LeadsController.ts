@@ -1,6 +1,7 @@
 import LeadService from "App/Services/LeadsService";
+import LeadValidator from 'App/Validators/Lead/LeadValidator'
 
-export default class SellersController {
+export default class LeadsController {
   private leadService: LeadService;
 
   constructor() {
@@ -8,6 +9,7 @@ export default class SellersController {
   }
 
   public async store({ request, response }) {
+    await request.validate(LeadValidator)
     const query = request.all();
     try {
       return await this.leadService.store(query);

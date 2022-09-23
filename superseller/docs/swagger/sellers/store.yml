@@ -19,7 +19,7 @@
               email:
                 type: string
                 required: true
-              telefone:
+              telephone:
                 type: string
                 required: true
     produces:

@@ -25,8 +25,8 @@
 
                       email:
                         type: string
-                        
-                      telefone:
+
+                      telephone:
                         type: string
 
                       created_at:
